@@ -1,4 +1,5 @@
-### Console Z - Z-Image Workflow v2.0
+# Console Z
+### Z-Image Workflow v2.0
 > *The Ultimate Z-Image Upscale & Restoration Workflow for ComfyUI*
 
 ![Console Z Cover](assets/cover-image.png)

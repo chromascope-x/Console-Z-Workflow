@@ -73,5 +73,8 @@ Select your Checkpoint in the **Load Models** group. Connect your LoRAs in the *
 ### Adjust Final Look
 Tweak intensity in the **LTXV Film Grain** node or adjust iterations in the **Lucy Sharpen** node for your desired output. Use the Fast Bypasser buttons to toggle these modules on/off instantly.
 
+> [!TIP]
+> **Installation Fix**: If you encounter errors when installing `LTXV Film Grain` (e.g., Import Error), this GitHub discussion provides a working solution: [View Fix on GitHub #284](https://github.com/Lightricks/ComfyUI-LTXVideo/pull/284)
+
 ## Notes
 - **VRAM Usage**: SeedVR2 can be VRAM intensive. If you encounter OOM errors, enable `Tiled VAE` in the SeedVR2 settings.

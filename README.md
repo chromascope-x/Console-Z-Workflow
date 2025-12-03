@@ -76,5 +76,7 @@ Tweak intensity in the **LTXV Film Grain** node or adjust iterations in the **Lu
 > [!TIP]
 > **Installation Fix**: If you encounter errors when installing `LTXV Film Grain` (e.g., Import Error), this GitHub discussion provides a working solution: [View Fix on GitHub #284](https://github.com/Lightricks/ComfyUI-LTXVideo/pull/284)
 
+![node_finishing](assets/node_finishing_01.png)
+
 ## Notes
 - **VRAM Usage**: SeedVR2 can be VRAM intensive. If you encounter OOM errors, enable `Tiled VAE` in the SeedVR2 settings.

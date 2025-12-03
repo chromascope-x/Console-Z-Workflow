@@ -63,8 +63,8 @@ Select your Checkpoint in the **Load Models** group. Connect your LoRAs in the *
 ![node_sampler2](assets/node_sampler2_01.png)
 
 ### Choose Additional Upscaling (as needed)
-- **Ultimate SD Upscale**: Enable for adding texture to flat areas.
-- **SeedVR2**: Enable for fixing artifacts and restoration.
+- **Ultimate SD Upscale**: Enable to enhance details and add texture density.
+- **SeedVR2**: Enable for structural restoration and removing artifacts.
 - **Control**: Use the Fast Bypasser buttons to toggle these modules on/off instantly.
 - **⚠️ Important**: It is recommended to choose **EITHER** Ultimate SD Upscale **OR** SeedVR2, not both simultaneously. If you must chain them, significantly reduce the upscale factor (e.g., 1.2x or 1.5x) to prevent OOM errors and excessive image dimensions.
 

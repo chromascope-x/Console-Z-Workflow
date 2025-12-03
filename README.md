@@ -1,6 +1,3 @@
-# console-z-workflow
-a streamlined Z-Image workflow with upscale options
-
 # CONSOLE Z
 ### Z-Image Workflow v2.0
 > *The Ultimate Z-Image Upscale & Restoration Workflow for ComfyUI*
@@ -9,6 +6,8 @@ a streamlined Z-Image workflow with upscale options
 
 ## Overview
 Console Z is a high-performance, streamlined ComfyUI workflow designed for quick image upscaling and restoration. It combines the speed of **Z-Image Turbo** with the state-of-the-art **SeedVR2** and **Ultimate SD Upscale** technologies.
+
+![Console Z UI Overview](assets/console-z-workflow-v2-0-demo_ui.png)
 
 ## Key Features
 

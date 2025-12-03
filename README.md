@@ -53,16 +53,19 @@ Select your Checkpoint in the **Load Models** group. Connect your LoRAs in the *
 ### Select Input Mode
 - **Text-to-Image**: Enter your prompt and leave the Load Image node bypassed or unused.
 - **Image-to-Image**: Load your image in the **Load Image (i2i)** group and ensure the switch is set to use the image input.
+![node_i2i](assets/node_i2i_01.png)
 
 ### Configure Sampler Upscaling
 - **Use Sampler 2 Upscale?**: Choose whether to enable the second pass upscaling.
 - **Sampler 2 Upscale Method**: Selects between 1: Latent Upscale (Faster) and 2: Pixel Upscale (Quality).
+![node_sampler2](assets/node_sampler2_01.png)
 
 ### Choose Additional Upscaling (as needed)
 - **Ultimate SD Upscale**: Enable for adding texture to flat areas.
 - **SeedVR2**: Enable for fixing artifacts and restoration.
 - **Control**: Use the Fast Bypasser buttons to toggle these modules on/off instantly.
 - **⚠️ Important**: It is recommended to choose **EITHER** Ultimate SD Upscale **OR** SeedVR2, not both simultaneously. If you must chain them, significantly reduce the upscale factor (e.g., 1.2x or 1.5x) to prevent OOM errors and excessive image dimensions.
+![node_additional](assets/node_additional_01.png)
 
 ### Adjust Final Look
 Tweak intensity in the **LTXV Film Grain** node or adjust iterations in the **Lucy Sharpen** node for your desired output. Use the Fast Bypasser buttons to toggle these modules on/off instantly.

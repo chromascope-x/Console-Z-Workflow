@@ -5,8 +5,8 @@
 ![Console Z Cover](assets/cover-image.png)
 
 ## Download
-- [Download Workflow (JSON)](workflows/console-z-workflow-v2-0.png)
-- [Download Workflow (PNG)](workflows/console-z-workflow-v2-0-demo.png)
+- [Download Workflow (JSON)](workflows/console-z-workflow-v2-0.json)
+- [Download Workflow (PNG)](workflows/console-z-workflow-v2-0.png)
 - [Download Workflow with Demo (PNG)](workflows/console-z-workflow-v2-0-demo.png)
 
 ## Overview

@@ -14,6 +14,62 @@ Console Z is a high-performance, streamlined ComfyUI workflow designed for quick
 
 ![Console Z UI Overview](assets/console-z-workflow-v2-0-demo_ui.png)
 
+
+## Architecture Data Flow
+```mermaid
+graph TD
+    classDef core fill:#223355,stroke:#66ccff,stroke-width:2px,color:#fff;
+    classDef input fill:#332233,stroke:#ff99cc,stroke-width:2px,color:#fff;
+    classDef sampler fill:#224433,stroke:#44ff99,stroke-width:2px,color:#fff;
+    classDef decision fill:#553322,stroke:#ffcc66,stroke-width:2px,color:#fff;
+    classDef upscale fill:#2a363b,stroke:#99aabb,stroke-width:2px,color:#fff;
+    classDef final fill:#333344,stroke:#aa88ff,stroke-width:2px,color:#fff;
+
+    Core["⚡ Core Engine<br/>Load Models / LoRA<br/>(Patch Sage Attn)"]:::core
+    Input{"🔄 Input Switch"}:::input
+    T2I["Text-to-Image"]:::input
+    I2I["Image-to-Image"]:::input
+    Samp1["🎨 Sampler 1<br/>Base Generation"]:::sampler
+    MethodSwitch{"🔀 Upscale Decision"}:::decision
+    M1["Method 1: Latent Upscale<br/>(Speed)"]:::upscale
+    M2["Method 2: Pixel Upscale<br/>(Quality)"]:::upscale
+    Samp2["🖌️ Sampler 2<br/>Refinement"]:::sampler
+    RestoreEntry{"💫 Restoration Modules Decision<br/>(Upscale + Restore)"}:::decision
+    UltSD["Ultimate SD Upscale"]:::final
+    SeedVR["SeedVR2"]:::final
+    FinishingEntry{"✨ Finishing Modules Decision"}:::decision
+    Sharpen["🔪 Lucy Sharpen"]:::final
+    Grain["🎞️ Film Grain"]:::final
+    Output((Save Image)):::final
+
+    Core --> T2I
+    Core --> I2I
+    T2I --> Input
+    I2I --> Input
+    Input --> Samp1
+    Samp1 --> MethodSwitch
+    
+    MethodSwitch -- "Method 1" --> M1
+    MethodSwitch -- "Method 2" --> M2
+    
+    MethodSwitch -- "Bypass Sampler 2" --> RestoreEntry
+    
+    M1 --> Samp2
+    M2 --> Samp2
+    Samp2 --> RestoreEntry
+    
+    RestoreEntry -- "Bypass Restoration" --> FinishingEntry
+    RestoreEntry --> UltSD
+    UltSD --> SeedVR
+    SeedVR --> FinishingEntry
+    
+    FinishingEntry -- "Bypass Finishing" --> Output
+    FinishingEntry --> Sharpen
+    Sharpen --> Grain
+    Grain --> Output
+
+```
+
 ## Key Features
 
 - **Turbocharged Core**: Integrated with `Patch Sage Attention KJ` and `Torch Compile Settings` (FP16 Accumulation) to maximize inference speed on supported hardware.

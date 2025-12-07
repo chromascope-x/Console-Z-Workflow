@@ -100,7 +100,7 @@ graph TD
 - **Turbocharged Core**: Integrated with `Patch Sage Attention KJ` and `Torch Compile Settings` (FP16 Accumulation) to maximize inference speed on supported hardware.
 
 - **Seamless I2I Integration**:
-  - Switch between Text-to-Image (T2I) and Image-to-Image (I2I) instantly via the Console.
+  - Switch between Text-to-Image (T2I) and Image-to-Image (I2I) instantly via Input Selection.
   - No need to rewire latent connections; simply load your image and toggle the "Image to Image?" switch. The workflow handles the VAE encoding and latent injection automatically.
 
 - **LoRA Ready**: Seamlessly integrated LoRA support. Simply connect your preferred LoRA models to the dedicated loader stack to instantly enhance style or character consistency without disrupting the core workflow.

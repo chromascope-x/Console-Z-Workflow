@@ -64,7 +64,7 @@ graph TD
     
     Samp1 --> Samp2Check
     Samp2Check -- "Yes" --> UpscaleDec
-    Samp2Check -- "No<br/>(Pass Samp 1 Image)" --> AddProcDec
+    Samp2Check -- "No<br/>(Pass Samp 1 Latent)" --> AddProcDec
     
     UpscaleDec --> M1
     UpscaleDec --> M2

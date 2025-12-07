@@ -143,13 +143,16 @@ Select your Checkpoint in the **Load Models** group. Connect your LoRAs in the *
 - **Text-to-Image**: Enter your prompt. Ensure the **"Image to Image?"** switch is set to the NO position. 
 - **Image-to-Image**:
     1. Load your source image in the **Load Image (i2i)** node.
-    2. Toggle the **"Image to Image?"** switch to ON (Active).
+    2. Toggle the **"Image to Image?"** switch to YES (Active).
     3. Adjust your denoise strength in Sampler 1 to control how much the input image is preserved.
 
 ![node_i2i](assets/node_i2i_02.png)
 
 ### 3. Core Sampling & Monitoring
-- **Use Sampler 2 Upscale?**: Toggle this to enable the second pass.
+- **Use Sampler 2 Upscale?**: Toggle this to enable the second pass for refinement and upscaling.
+	- **KSampler Denoise Strategy**:
+        - **0.1 - 0.3**: Subtle enhancement; stays close to the base generation.
+        - **0.5 - 0.9**: Creative re-imagining; adds significant details but deviates more from the original structure.
 - **Preview vs. Save**: Check the **Sampler 1 Preview** and **Sampler 2 Preview** nodes.
     - **Default**: Set to `only_preview: True` (View only, no disk save).  
     - **To Save**: Change to `only_preview: False` if you want to keep the intermediate images.

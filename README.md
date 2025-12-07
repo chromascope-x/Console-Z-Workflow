@@ -138,8 +138,9 @@ Ensure you have the following Custom Node packs installed via ComfyUI Manager:
 
 ### 1. Load Models & LoRAs
 Select your Checkpoint in the **Load Models** group. Connect your LoRAs in the **Load LoRA** group to apply custom styles.
+
 ### 2. Input Mode (T2I / I2I)
-- **Text-to-Image**: Enter your prompt. Ensure the **"Image to Image?"** switch is set to the OFF/Bypass position. 
+- **Text-to-Image**: Enter your prompt. Ensure the **"Image to Image?"** switch is set to the NO position. 
 - **Image-to-Image**:
     1. Load your source image in the **Load Image (i2i)** node.
     2. Toggle the **"Image to Image?"** switch to ON (Active).
